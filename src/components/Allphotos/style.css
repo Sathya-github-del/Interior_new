@@ -1,0 +1,196 @@
+/* General Styles */
+.all-photos-container {
+    padding: 20px;
+  }
+  
+  .pin-auth-container {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .pin-auth-container input {
+    padding: 8px;
+    font-size: 16px;
+  }
+  
+  .pin-auth-container button {
+    padding: 10px;
+    font-size: 16px;
+    margin-top: 10px;
+  }
+  
+  .photos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+  }
+  
+  .photo-item {
+    position: relative;
+    width: 100%; /* Make sure the items are flexible */
+    max-width: 250px; /* You can set a max-width or it will adjust automatically */
+    height: auto;
+    overflow: hidden; /* Prevent overflow */
+  }
+  
+  .photo-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Make sure images cover the area of the container */
+  }
+  
+  .photo-actions {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+  }
+  
+  .upload-section {
+    margin-top: 30px;
+    text-align: center;
+  }
+  
+  .selected-image-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .selected-image-modal img {
+    max-width: 80%;
+    max-height: 80%;
+  }
+  
+  .selected-image-modal button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #f00;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  /* Media Queries for Responsiveness */
+  
+  /* Smartphones and smaller devices (max-width: 600px) */
+  @media (max-width: 600px) {
+    .photo-item {
+      max-width: 150px;  /* Set a smaller max-width on small devices */
+      flex-grow: 1;
+    }
+  
+    .photos {
+      gap: 10px;
+    }
+  
+    .upload-section {
+      margin-top: 20px;
+    }
+  
+    .pin-auth-container input {
+      width: 80%;
+    }
+  
+    .pin-auth-container button {
+      width: 80%;
+    }
+  }
+  
+  /* Tablets (max-width: 1024px) */
+  @media (max-width: 1024px) {
+    .photo-item {
+      max-width: 180px;
+    }
+  
+    .photos {
+      gap: 12px;
+    }
+  
+    .upload-section {
+      margin-top: 25px;
+    }
+  
+    .pin-auth-container input {
+      width: 70%;
+    }
+  
+    .pin-auth-container button {
+      width: 70%;
+    }
+  }
+  
+  /* Desktops (min-width: 1025px) */
+  @media (min-width: 1025px) {
+    .photo-item {
+      max-width: 220px;  /* Increase the max-width for larger screens */
+    }
+  
+    .photos {
+      gap: 15px;
+    }
+  
+    .upload-section {
+      margin-top: 30px;
+    }
+  }
+  
+  /* Large Screens (min-width: 1440px) */
+  @media (min-width: 1440px) {
+    .photo-item {
+      max-width: 250px;  /* Larger max-width for wide screens */
+    }
+  
+    .photos {
+      gap: 20px;
+    }
+  
+    .upload-section {
+      margin-top: 40px;
+    }
+  
+    .pin-auth-container input {
+      width: 50%;
+    }
+  
+    .pin-auth-container button {
+      width: 50%;
+    }
+  }
+  
+  /* Very Large Screens (min-width: 1920px and up) */
+  @media (min-width: 1920px) {
+    .photo-item {
+      max-width: 300px;  /* Set the max-width for ultra-wide screens */
+    }
+  
+    .photos {
+      gap: 25px;
+    }
+  
+    .upload-section {
+      margin-top: 50px;
+    }
+  
+    .pin-auth-container input {
+      width: 40%;
+    }
+  
+    .pin-auth-container button {
+      width: 40%;
+    }
+  }
+  

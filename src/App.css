@@ -1,0 +1,97 @@
+.loader {
+    --c: no-repeat linear-gradient(orange 0 0);
+    background:
+        var(--c), var(--c), var(--c),
+        var(--c), var(--c), var(--c),
+        var(--c), var(--c), var(--c);
+    background-size: 16px 16px;
+    animation:
+        l32-1 1s infinite,
+        l32-2 1s infinite;
+
+}
+
+@keyframes l32-1 {
+
+    0%,
+    100% {
+        width: 45px;
+        height: 45px
+    }
+
+    35%,
+    65% {
+        width: 65px;
+        height: 65px
+    }
+}
+
+@keyframes l32-2 {
+
+    0%,
+    40% {
+        background-position: 0 0, 0 50%, 0 100%, 50% 100%, 100% 100%, 100% 50%, 100% 0, 50% 0, 50% 50%
+    }
+
+    60%,
+    100% {
+        background-position: 0 50%, 0 100%, 50% 100%, 100% 100%, 100% 50%, 100% 0, 50% 0, 0 0, 50% 50%
+    }
+}
+
+
+/* HTML: <div class="loader"></div> */
+/* .loader {
+    width: 45px;
+    aspect-ratio: 1;
+    --c: no-repeat linear-gradient(#000 0 0);
+    background:
+        var(--c) 0 0,
+        var(--c) 0 100%,
+        var(--c) 50% 50%,
+        var(--c) 100% 0,
+        var(--c) 100% 100%;
+    animation: l13 1s infinite alternate;
+}
+
+@keyframes l13 {
+
+    0%,
+    10% {
+        background-size: 20% 100%
+    }
+
+    50% {
+        background-size: 20% 20%
+    }
+
+    90%,
+    100% {
+        background-size: 100% 20%
+    }
+} */
+
+
+/* HTML: <div class="loader"></div> */
+/* .loader {
+    --b: 5px;
+    width: calc(12*var(--b));
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background:
+        repeating-radial-gradient(calc(2*var(--b)) at top, #0000 -1px, #000 0 calc(50% - 1px), #0000 50% calc(100% - 1px)) calc(50% + var(--b)) 100%,
+        repeating-radial-gradient(calc(2*var(--b)) at bottom, #000 -1px, #0000 0 calc(50% - 1px), #000 50% calc(100% - 1px)) 50% 0;
+    background-size: 150% 50%;
+    background-repeat: no-repeat;
+    background-color: orange;
+    mask:
+        radial-gradient(calc(1.5*var(--b)) at calc(100% - var(--b)/2) 0, #0000 calc(100%/3), #000 calc(100%/3 + 1px) 110%, #0000 0) calc(50% + var(--b)/2) 100%/calc(3*var(--b)) 50% exclude no-repeat,
+        conic-gradient(#000 0 0);
+    animation: l20 1s infinite linear;
+}
+
+@keyframes l20 {
+    100% {
+        transform: rotate(1turn)
+    }
+} */

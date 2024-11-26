@@ -1,0 +1,362 @@
+/* Base styling */
+.last-section {
+    background-color: var(--primary-bg);
+    color: var(--text-color);
+    padding: 40px 20px;
+    font-family: 'Arial', sans-serif;
+}
+
+h2 {
+    font-size: 2rem;
+    color: var(--heading-color);
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--text-color);
+}
+
+.about {
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.services {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.service-card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+    opacity: 0;
+    animation: scaleRotateIn 0.5s forwards, fadeIn 0.5s forwards;
+}
+
+/* New Animation - Scale and Rotate In (on load) */
+@keyframes scaleRotateIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.8) rotate(-15deg);
+        /* Small scale and slight rotation */
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1) rotate(0deg);
+        /* Normal scale and no rotation */
+    }
+}
+
+/* New Animation - Fade In (on load) */
+@keyframes fadeIn {
+    0% {
+        transform: translateX(100px);
+        /* Start from the right */
+    }
+
+    100% {
+        transform: translateX(0);
+        /* End at the original position */
+    }
+}
+
+/* Hover Animations - Scale and Rotate */
+.service-card:hover {
+    background-color: var(--card-hover-bg);
+    transform: scale(1.05) rotate(5deg);
+    /* Slightly scale up and rotate on hover */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    /* Add shadow on hover */
+}
+
+/* Icon Styling */
+.service-card i {
+    font-size: 3rem;
+    color: var(--icon-color);
+    margin-bottom: 10px;
+}
+
+/* Service Card Heading */
+.service-card h3 {
+    font-size: 1.25rem;
+    color: var(--heading-color);
+    margin-bottom: 10px;
+}
+
+/* Service Card Text */
+.service-card p {
+    font-size: 1rem;
+    color: var(--text-color);
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    --primary-bg: #181818;
+    --secondary-bg: #222222;
+    --text-color: #f5f5f5;
+    --heading-color: #ffffff;
+    --link-color: #1e90ff;
+    --card-bg: #2a2a2a;
+    --card-hover-bg: #333333;
+    --icon-color: #f39c12;
+    --border-color: #444;
+}
+
+/* Target headings specifically when dark mode is enabled */
+body.dark-mode h2 {
+    color: #ffffff;
+    /* White color for headings */
+}
+
+/* price css
+
+/* Main container for the pricing section */
+.pricing-section {
+    padding: 40px;
+    background-color: #f9f9f9;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 50px;
+}
+
+/* Pricing Title */
+.pricing-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.pricing-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(to right, #4CAF50, #FF9800);
+    border-radius: 5px;
+}
+
+/* Price Card */
+.price-card {
+    background-color: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.price-card h3 {
+    font-size: 1.8rem;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.price-card p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/* Price List */
+.price-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.price-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fafafa;
+    padding: 12px 20px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.price-item:hover {
+    background-color: #e8f5e9;
+    transform: translateX(10px);
+}
+
+.price-label {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #333;
+}
+
+.price-range {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #4CAF50;
+}
+
+/* Button Styles */
+.quote2 button {
+    padding: 12px 25px;
+    font-size: 1.2rem;
+    background: linear-gradient(135deg, #4CAF50, #FF9800);
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin-top: 20px;
+}
+
+.quote2 button:hover {
+    background: linear-gradient(135deg, #FF9800, #4CAF50);
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+    .price-card {
+        padding: 20px;
+    }
+
+    .price-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .price-range {
+        margin-top: 5px;
+    }
+}
+
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .last-section {
+        padding: 20px 10px;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .service-card {
+        padding: 15px;
+    }
+
+    .service-card i {
+        font-size: 2.5rem;
+    }
+
+    .service-card h3 {
+        font-size: 1.125rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Define color variables for light and dark themes */
+:root {
+    --primary-bg: #ffffff;
+    --secondary-bg: #f5f5f5;
+    --text-color: #333333;
+    --heading-color: #222222;
+    --link-color: #1e90ff;
+    --card-bg: #ffffff;
+    --card-hover-bg: #f0f0f0;
+    --icon-color: #f39c12;
+    --border-color: #ddd;
+}
+
+/* Keyframe Animations */
+
+/* Initial Scale and Rotation Animation */
+@keyframes scaleRotateIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.8) rotate(-15deg);
+        /* Start small and rotated */
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1) rotate(0deg);
+        /* End in normal size and orientation */
+    }
+}
+
+body.dark-mode .pricing-section {
+    background-color: #2a2a2a;
+    color: #f5f5f5;
+}
+
+body.dark-mode .pricing-title {
+    color: #ffffff;
+}
+
+body.dark-mode .pricing-title::after {
+    background: linear-gradient(to right, #4CAF50, #FF9800);
+}
+
+body.dark-mode .price-card {
+    background-color: #333333;
+    color: #f5f5f5;
+}
+
+body.dark-mode .price-card h3 {
+    color: #ffffff;
+}
+
+body.dark-mode .price-card p {
+    color: #cccccc;
+}
+
+body.dark-mode .price-list {
+    color: #f5f5f5;
+}
+
+body.dark-mode .price-item {
+    background-color: #444444;
+    color: #f5f5f5;
+}
+
+body.dark-mode .price-item:hover {
+    background-color: #555555;
+}
+
+body.dark-mode .price-label {
+    color: #cccccc;
+}
+
+body.dark-mode .price-range {
+    color: #4CAF50;
+}
+
+body.dark-mode .quote2 button {
+    background: linear-gradient(135deg, #4CAF50, #FF9800);
+    color: #ffffff;
+}
+
+body.dark-mode .quote2 button:hover {
+    background: linear-gradient(135deg, #FF9800, #4CAF50);
+}

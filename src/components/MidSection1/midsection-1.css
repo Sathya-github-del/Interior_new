@@ -1,0 +1,273 @@
+/* Container and overall layout */
+.container-new {
+    position: relative;
+    padding: 40px;
+    box-sizing: border-box;
+}
+
+.content-new {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+/* Image grid */
+.image-grid-new {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /* Default 4 columns */
+    gap: 15px;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+
+
+.image-item-new:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.image-item-new img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Quote button */
+.quote-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.image-item-new {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeInOut 2s ease-out;
+}
+
+@keyframes fadeInOut {
+    0% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.image-item-new:hover .quote-text {
+    opacity: 1;
+}
+
+.quote-text button {
+    padding: 12px 20px;
+    font-size: 16px;
+    background-color: #f39c12;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.quote-text button:hover {
+    background-color: #d35400;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
+    transform: scale(1.1);
+}
+
+.text-overlay {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    color: white;
+    animation: fadeInOut 2s ease-out;
+    width: 100%;
+    padding-top: 20px;
+}
+
+@keyframes fadeInOut {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.text-overlay h3 {
+    font-size: 36px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 20px;
+    background-color: rgba(0, 0, 0, 0.402);
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.text-overlay p {
+    font-size: 18px;
+    font-weight: 300;
+    background-color: rgba(0, 0, 0, 0.402);
+    color: #fff;
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Desktop screens */
+@media (min-width: 1200px) {
+    .container-new {
+        padding: 60px;
+        /* Increase padding on larger screens for more space */
+    }
+
+    .image-grid-new {
+        grid-template-columns: repeat(4, 1fr);
+        /* 4 columns on desktop */
+        gap: 15px;
+    }
+
+    /* Adjust the .text-overlay position for desktop */
+    .text-overlay {
+        top: 25%;
+        /* Move text down on desktop */
+    }
+
+    .text-overlay h3 {
+        font-size: 36px;
+        /* Larger font size for desktop */
+        margin-bottom: 20px;
+        padding: 10px;
+        margin-top: 15px;
+        /* Add more space between the heading and the text */
+    }
+
+    .text-overlay p {
+        font-size: 18px;
+        /* Larger font size for desktop */
+        padding: 10px;
+        margin-top: 10px;
+        /* Add margin for spacing between the elements */
+    }
+}
+
+/* Medium screens and below (Tablets) */
+@media (max-width: 1200px) {
+    .image-grid-new {
+        grid-template-columns: repeat(3, 1fr);
+        /* 3 columns on medium screens */
+    }
+}
+
+/* Smaller screens (Mobile devices) */
+@media (max-width: 900px) {
+    .image-grid-new {
+        grid-template-columns: repeat(2, 1fr);
+        /* 2 columns on smaller screens */
+    }
+
+    .text-overlay h3 {
+        font-size: 28px;
+    }
+
+    .text-overlay p {
+        font-size: 16px;
+    }
+}
+
+/* Smartphone screens (below 600px) */
+@media (max-width: 600px) {
+
+    /* Create 4 columns per row with 2 rows, 4x2 layout */
+    .image-grid-new {
+        grid-template-columns: repeat(4, 1fr);
+        /* 4 images per row */
+        grid-template-rows: repeat(2, auto);
+        /* Automatically creates 2 rows */
+        gap: 10px;
+        /* Reduced gap for smaller screens */
+    }
+
+    /* Move the text down on smaller screens */
+    .text-overlay {
+        top: 10%;
+        /* Move text down further on smartphones */
+    }
+
+    .text-overlay h3 {
+        font-size: 22px;
+        /* Smaller font size */
+        margin-bottom: 15px;
+        padding: 8px;
+    }
+
+    .text-overlay p {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    /* Adjust the quote button for mobile */
+    .quote-text button {
+        font-size: 14px;
+        padding: 10px 16px;
+    }
+}
+
+/* Very small screens (Extra small phones) */
+@media (max-width: 400px) {
+    .text-overlay h3 {
+        font-size: 20px;
+        /* Further reduce font size for ultra-small screens */
+    }
+
+    .text-overlay p {
+        font-size: 12px;
+    }
+
+    .quote-text button {
+        font-size: 14px;
+        padding: 12px 20px;
+    }
+}
