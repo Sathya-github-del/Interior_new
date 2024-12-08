@@ -9,7 +9,6 @@ const MidSection = () => {
         phoneNumber: '',
         email: '',
         cityName: '',
-        // Date: '',
         office: '',
         message: ''
 
@@ -21,7 +20,6 @@ const MidSection = () => {
         phoneNumber: '',
         email: '',
         cityName: '',
-        // Date: '',
         office: '',
         message: ''
     });
@@ -98,7 +96,6 @@ const MidSection = () => {
                 cityName: formData.cityName,
                 office: formData.office,
                 message: formData.message,
-                // Date: formData.Date,
             };
 
             // Send the form data to the Flask backend
@@ -158,7 +155,7 @@ const MidSection = () => {
                             <input
                                 type="tel"
                                 name="phoneNumber"
-                                placeholder="Phone Number"
+                                placeholder="+91"
                                 value={formData.phoneNumber}
                                 onChange={handleInputChange}
                                 maxLength="10"
@@ -228,7 +225,7 @@ const MidSection = () => {
                         {errors.Date && <p className="error-text">{errors.Date}</p>}
                     </div> */}
                     <button type="submit" className="button">Submit</button>
-                    <button type='submit' className='whatsaapbutton' onClick={handlewhatsaapsubmit} style={{ padding: ' 1px 1px 1px 1px' }}><FaWhatsapp size={40} /></button>
+                    <button type='submit' className='whatsaapbutton' onClick={handlewhatsaapsubmit} style={{ padding: ' 1px 1px 1px 1px' }}><FaWhatsapp size={40} /><p style={{ color: "#fff" }}>Need Quick reply</p></button>
                     <button type='submit' className='fbbutton' onClick={handlefacebooksubmit} style={{ padding: '1px 1px 1px 1px ' }}><FaFacebook size={40} /></button>
                 </form>
             </div>

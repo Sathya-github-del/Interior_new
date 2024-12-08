@@ -32,8 +32,8 @@ function App() {
           <Navbar />
           {/* Define routes here */}
           <Routes>
+            <Route path="/all-photos" element={<AllPhotos />} />
             <Route path="/" element={<><MidSection /><MidSection1 /><Gallery /><LastSection /></>} />
-            <Route path="/all-photos" element={<AllPhotos />} /> {/* Add route for AllPhotos */}
           </Routes>
           <Footer />
         </Suspense>

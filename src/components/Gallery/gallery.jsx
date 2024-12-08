@@ -89,7 +89,7 @@ const Gallery = () => {
                 openModal(`./assets/Images/Image (${index + 1}).jpg`);
               }}
             />
-            <div className="click-overlay">Click to Enlarge</div> {/* Overlay text */}
+            <div className="click-overlay" style={{ color: '#f39c12;' }}>Click to View</div> {/* Overlay text */}
           </div>
         ))}
       </div>

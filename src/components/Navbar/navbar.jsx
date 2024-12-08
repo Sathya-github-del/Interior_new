@@ -72,11 +72,23 @@ const Navbar = () => {
             <nav className={`navbar ${scrolled ? 'scrolled' : ''} ${darkMode ? 'dark-mode' : ''}`}>
                 <div className="logo">
                     <a href='/'>  <img src="assets/Logo.png" alt="RADHEY SMART INTERIORS" />
+                        <div className="logotxt">
+                            <a>
+                                <p style={{ color: '#f39c12', fontFamily: 'Times New Roman' }}>RADHEY</p>
+                            </a>
+                            <a>
+                                <p style={{ color: '#f39c12', fontFamily: 'Times New Roman' }}>SMART</p>
+                            </a>
+                            <a>
+                                <p style={{ color: '#f39c12', fontFamily: 'Times New Roman' }}>INTERIORS</p>
+                            </a>
+                        </div>
                     </a>
+
                 </div>
 
                 <ul className={`nav-links ${menuOpen ? 'active' : ''}`}>
-                    <li><a href='/' >Home</a></li>
+                    <li><a href='/'>Home</a></li>
                     <li>
                         <a
                             href="#gallery"
@@ -150,9 +162,9 @@ const Navbar = () => {
 
                 {/* Dark Mode Toggle Button */}
                 <button className="dark-mode-toggle" onClick={toggleDarkMode}>
-                    {darkMode ? '🌞 Light Mode' : '🌙 Dark Mode'}
+                    {darkMode ? '🌞' : '🌙'}
                 </button>
-            </nav>
+            </nav >
 
             <div
                 className="hero"
@@ -170,12 +182,21 @@ const Navbar = () => {
                             const form = document.querySelector('.contact-form');
                             form.scrollIntoView({ behavior: 'smooth' });
                         }}>
-                            <button>Get a Quote</button>
+
+                            <a href={window.location.pathname === '/all-photos' ? '/' : '#quote'} onClick={() => {
+                                if (window.location.pathname === '/') {
+                                    const form = document.querySelector('.contact-form');
+                                    form.scrollIntoView({ behavior: 'smooth' });
+                                }
+                            }}>
+                                <button >Get a Quote</button>
+                            </a>
+
                         </a>
                     </div>
                 </div>
             </div>
-        </div>
+        </div >
     );
 };
 

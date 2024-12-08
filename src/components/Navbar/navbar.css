@@ -41,11 +41,31 @@ body.dark-mode {
     background-color: transparent;
 }
 
+.logotxt {
+    margin-left: 70px;
+    margin-top: -90px;
+}
+
+.logotxt a {
+    font-size: 1.25rem;
+    letter-spacing: 0.1em;
+    margin-bottom: 1rem;
+    text-decoration: underline;
+    color: #f39c12;
+    transition: color 0.3s ease;
+    padding: 10px 0px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.logotxt a:hover {
+    color: #d35400;
+}
+
 
 .navbar .logo img {
-    max-width: 110px;
+    max-width: 55px;
     height: auto;
-    margin-top: 20px;
+    margin-top: 0px;
     transition: width 0.3s ease, transform 0.3s ease;
     transform: scale(1.05);
     text-shadow: 2px 2px 4px #fff;
@@ -92,7 +112,7 @@ body.dark-mode {
     display: flex;
     gap: 30px;
     align-items: center;
-    animation: slideIn 1s ease-in-out;
+    animation: slideIn 2s ease-in-out;
 }
 
 @keyframes slideIn {
@@ -118,7 +138,8 @@ body.dark-mode {
     font-weight: 700;
     padding: 10px 15px;
     display: inline-block;
-    border-radius: 20% 60% 45% 77%/ 50% 50% 50% 50%;
+    /* border-radius: 20% 60% 45% 77%/ 50% 50% 50% 50%; */
+    border-radius: 30px;
     transition: border-radius 2s ease;
 }
 
@@ -129,10 +150,8 @@ body.dark-mode {
 
 /* Navbar Link Hover */
 .navbar .nav-links a:hover {
-    color: black;
-    background-color: #f39c12;
-    border-radius: 50% 30% 80% 10% / 10% 50% 70% 30%;
-
+    color: #000;
+    background-color: #d35400;
 }
 
 /* Quote Button */
@@ -143,6 +162,7 @@ body.dark-mode {
     color: white;
     border-radius: 25px;
     font-weight: 600;
+    font-family: 'Times New Roman', Times, serif;
     text-transform: uppercase;
     text-decoration: none;
     border: none;
@@ -179,7 +199,7 @@ body.dark-mode {
     background-repeat: no-repeat;
     transition: transform 2s ease-out;
     overflow: hidden;
-    animation: slideInFromRight 2s ease-in-out;
+    animation: slideInFromRight 5s ease-in-out;
 }
 
 @keyframes slideInFromRight {

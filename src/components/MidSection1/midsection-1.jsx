@@ -13,49 +13,49 @@ const MidSection1 = () => {
             <div className="content-new">
                 <div className="image-grid-new">
                     <div className="image-item-new">
-                        <img src="/assets/Hompage_gal/1.jpg" alt="Interior Design" />
+                        <img src="/assets/Hompage_gal/1.jpg" alt="Radhey Smart Interiors" />
                         <div className="quote-text">
                             <button onClick={scrollIntoView}>Get a Quote</button>
                         </div>
                     </div>
                     <div className="image-item-new">
-                        <img src="/assets/Hompage_gal/2.jpg" alt="Interior Design" />
+                        <img src="/assets/Hompage_gal/2.jpg" alt="Radhey Smart Interiors" />
                         <div className="quote-text">
                             <button onClick={scrollIntoView}>Get a Quote</button>
                         </div>
                     </div>
                     <div className="image-item-new">
-                        <img src="/assets/Hompage_gal/3.jpg" alt="Interior Design" />
+                        <img src="/assets/Hompage_gal/3.jpg" alt="Radhey Smart Interiors" />
                         <div className="quote-text">
                             <button onClick={scrollIntoView}>Get a Quote</button>
                         </div>
                     </div>
                     <div className="image-item-new">
-                        <img src="/assets/Hompage_gal/4.jpg" alt="Interior Design" />
+                        <img src="/assets/Hompage_gal/4.jpg" alt="Radhey Smart Interiors" />
                         <div className="quote-text">
                             <button onClick={scrollIntoView}>Get a Quote</button>
                         </div>
                     </div>
                     <div className="image-item-new">
-                        <img src="/assets/Hompage_gal/5.jpg" alt="Interior Design" />
+                        <img src="/assets/Hompage_gal/5.jpg" alt="Radhey Smart Interiors" />
                         <div className="quote-text">
                             <button onClick={scrollIntoView}>Get a Quote</button>
                         </div>
                     </div>
                     <div className="image-item-new">
-                        <img src="/assets/Hompage_gal/6.jpg" alt="Interior Design" />
+                        <img src="/assets/Hompage_gal/6.jpg" alt="Radhey Smart Interiors" />
                         <div className="quote-text">
                             <button onClick={scrollIntoView}>Get a Quote</button>
                         </div>
                     </div>
                     <div className="image-item-new">
-                        <img src="/assets/Hompage_gal/7.jpg" alt="Interior Design" />
+                        <img src="/assets/Hompage_gal/7.jpg" alt="Radhey Smart Interiors" />
                         <div className="quote-text">
                             <button onClick={scrollIntoView}>Get a Quote</button>
                         </div>
                     </div>
                     <div className="image-item-new">
-                        <img src="/assets/Hompage_gal/8.jpg" alt="Interior Design" />
+                        <img src="/assets/Hompage_gal/8.jpg" alt="Radhey Smart Interiors" />
                         <div className="quote-text">
                             <button onClick={scrollIntoView}>Get a Quote</button>
                         </div>

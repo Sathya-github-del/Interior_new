@@ -111,7 +111,7 @@ const Footer = () => {
                 </div>
             </div>
             <div className="footer-bottom">
-                <p>© 2024 RadheySmart Interiors | All Rights Reserved</p>
+                <p>© 2024 Radhey Smart Interiors | All Rights Reserved</p>
                 {/* <p><a href="/privacy">Privacy Policy</a> | <a href="#terms">Terms of Service</a></p> */}
             </div>
         </footer>
